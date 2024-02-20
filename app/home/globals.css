@@ -1,0 +1,212 @@
+*{
+  
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f4f4f4;
+}
+
+header{
+  display: flex;
+  width: 100%;
+  height: 60px;
+  background-color: #222222;
+  color: white;
+}
+
+@keyframes flying-blobs {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(200px, 100px);
+  }
+  50% {
+    transform: translate(400px, 300px);
+  }
+  75% {
+    transform: translate(800px, 300px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.bouncing-blob {
+  width: 32vw;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: flying-blobs 10s infinite ease-in-out alternate;
+}
+
+/* Додайте стилі для різних кольорів */
+.bouncing-blob--blue {
+  background: #FFBD59;
+}
+
+.bouncing-blob--white {
+  background: #ffffff;
+  z-index: 2;
+  width: 15vw;
+}
+
+.bouncing-blob--purple {
+  background: #FFBD59;
+}
+
+.bouncing-blob--pink {
+  background: #e289cd50;
+}
+
+.bouncing-blobs-container {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.bouncing-blobs-glass {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(140px);
+  -webkit-backdrop-filter: blur(140px);
+  pointer-events: none;
+}
+
+
+.bouncing-blobs {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.Headers2{
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.Headers2 ul{
+  width: 150px;
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+}
+
+.Headers2 a{
+  font-size: 20px;
+  color: #222222;
+  text-decoration: none;
+}
+
+.Headers2 a:hover{
+  color: #222222;
+  text-decoration: underline;
+}
+
+.MyT_NR{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.MyT_NR:before {
+  content: "";
+  position: absolute;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  border-radius: 10px;
+  background-color: #ffffff5b;
+  box-shadow: 0 -0px 25px -5px rgba(0,0,0,.1), 0 8px 10px -20px rgba(0,0,0,.1);
+  z-index: -1;
+}
+
+.MyT_BL{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ImgContainer {
+  border-radius: 10px;
+  position: relative;
+  width: 540px;
+  height: 340px;
+  overflow: hidden;
+  top: -30px; 
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.ImgR {
+  border-radius: 10px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.ImgR.prevL {
+  transform: translateX(-100%);
+}
+
+.ImgR.next {
+  transform: translateX(100%);
+}
+
+.round-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #222222;
+  color: #fff;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.But_RV button{
+  margin: 10px
+}
+
+
+.MyT_NR2His{
+  margin-top: 300px;
+  padding-left: 15%;
+  padding-right: 15%;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.MyT_NR_Text2His{
+  margin-left: 100px;
+}
